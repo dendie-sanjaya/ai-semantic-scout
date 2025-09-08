@@ -1,3 +1,27 @@
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "II Data Security Protocol PT. Contoh Perusahaan Teknologi Indonesia Dokumen ini bersifat internal dan rahasia", "halaman": 1}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "1. Tujuan Dokumen ini bertujuan untuk menetapkan protokol dan kebijakan keamanan data guna melindungi kerahasiaan,", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "integritas, dan ketersediaan informasi perusahaan dari akses tidak sah, kebocoran data, serta serangan siber. 2.", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Ruang Lingkup Protokol ini mencakup semua jenis data, baik yang disimpan secara fisik maupun digital,", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "dan berlaku untuk seluruh sistem, jaringan, perangkat, serta personel yang mengakses data milik perusahaan. 3.", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Klasifikasi Data Semua data harus diklasifikasikan berdasarkan sensitivitas: Kategori Deskripsi Contoh Data Publik Informasi terbuka", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "yang tidak membahayakan perusahaan Konten web, siaran pers Data Internal Digunakan secara internal, tidak untuk", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "publik Dokumen kebijakan, laporan harian Data Rahasia Mengandung informasi bisnis penting Data karyawan, kontrak kerja", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Data Sensitif/Kritis Data berdampak tinggi jika bocor Data pribadi pelanggan, strategi bisnis, data fin", "halaman": 2}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "4. Perlindungan Data Saat Disimpan (Data at Rest) Semua data rahasia/sensitif harus dienkripsi (AES-256). Akses", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "dibatasi dengan prinsip least privilege. Backup otomatis disimpan di lokasi berbeda dan aman. 5. Perlindungan", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Data Saat Dikirimkan (Data in Transit) Gunakan HTTPS/TLS 1.2+, VPN untuk akses luar. Dilarang kirim", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "data sensitif tanpa enkripsi. 6. Akses & Autentikasi Gunakan login kuat dan 2FA. Terapkan kontrol", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "akses berbasis peran. Audit log dicatat dan ditinjau rutin. 7. Pemantauan & Logging Semua aktivitas", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "dicatat dengan sistem logging terpusat. Log disimpan minimal 12 bulan. 8. Pencegahan Kebocoran Data (DLP)", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Gunakan software DLP, blokir USB/email tidak sah, larang penggunaan cloud pribadi. 9. Penghapusan Data Data", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "yang tidak terpakai harus dihapus secara aman. Media digital di-wipe, fisik dihancurkan. 10. Tanggung Jawab", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Pengguna Setiap karyawan bertanggung jawab menjaga data yang diakses. Wajib lapor pelanggaran ke tim IT.", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "11. Kepatuhan dan Audit Akan dilakukan audit rutin. Pelanggaran dapat diberi sanksi sesuai tingkat kesalahan.", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "12. Contoh Implementasi - Enkripsi database PostgreSQL menggunakan TDE - Transfer file klien via SFTP", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "- Backup terenkripsi otomatis ke cloud - Pemakaian BitLocker untuk laptop kerja - Email dengan", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "enkripsi PGP - Google Workspace dengan DLP rules aktif 13. Pernyataan Kepatuhan", "halaman": 3}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "Saya memahami dan akan mematuhi Data Security Protocol ini: Nama: ____________________ Jabatan: __________________ Tanda Tangan:", "halaman": 4}
+{"sumber_file": "Data_Security_Protocol.pdf", "konten": "____________ Tanggal: ________________", "halaman": 4}
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "Laporan Keuangan Kuartal 2 Tahun 2025 Dokumen ini menyajikan laporan keuangan perusahaan untuk periode April", "halaman": 1}
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "hingga Juni 2025. Laporan ini mencakup pendapatan, beban operasional, laba bersih, serta analisis perbandingan dengan", "halaman": 1}
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "kuartal sebelumnya. 1. Ringkasan Eksekutif Pada Kuartal 2 Tahun 2025, perusahaan menunjukkan pertumbuhan finansial yang", "halaman": 1}
@@ -17,6 +41,34 @@
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "Tanda Tangan Persetujuan: Jabatan Nama Lengkap Tanda Tangan Tanggal Direktur Keuangan Iwan Firmansyah (Tertanda) 30", "halaman": 2}
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "September 2025 CEO / Direktur Utama Diana Lestari (Tertanda) 30 September 2025 Manajer Akuntansi Rudi", "halaman": 2}
 {"sumber_file": "Financial_Report_Q2_2025.pdf", "konten": "Hartono (Tertanda) 30 September 2025", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "New Employee Manual PT. Contoh Perusahaan Teknologi Indonesia 1. Selamat Datang Selamat datang di PT.", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Contoh Perusahaan Teknologi Indonesia! Kami sangat senang Anda bergabung bersama kami. Panduan ini dirancang untuk", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "membantu Anda memahami nilai-nilai perusahaan, kebijakan, dan prosedur kerja yang berlaku di lingkungan kerja kita.", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "2. Visi & Misi Perusahaan Visi: Menjadi perusahaan teknologi terkemuka di Asia Tenggara yang berfokus", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "pada inovasi berkelanjutan. Misi: - Memberikan solusi teknologi yang berdampak nyata. - Membangun lingkungan kerja", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "yang kolaboratif, inklusif, dan penuh semangat. - Memberikan layanan prima kepada klien dan pengguna akhir.", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "3. Nilai-Nilai Perusahaan - Integritas: Jujur dan bertanggung jawab. - Kolaborasi: Bekerja sama untuk mencapai", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "tujuan bersama. - Inovasi: Terus mencari cara baru dan lebih baik. - Keunggulan: Menjadi yang", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "terbaik di bidang kita. 4. Struktur Organisasi Anda akan bekerja di bawah divisi/divisi fungsional berikut:", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "- CEO III CTO / COO / CFO III Kepala Divisi III Supervisor III Anda", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "dan Tim Anda (Silakan lihat bagan organisasi terlampir untuk detail lengkap.) 5. Aturan Umum dan", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Etika Kerja", "halaman": 1}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "- Jam kerja: 08.00 - 17.00 (Senin - Jumat) - Istirahat makan siang: 12.00 -", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "13.00 - Pakaian: Smart casual (kecuali ada dress code khusus acara tertentu) - Dilarang menggunakan", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "data atau aset perusahaan untuk kepentingan pribadi. - Jaga kerahasiaan data perusahaan dan klien. 6.", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Kehadiran & Cuti - Kehadiran dicatat menggunakan sistem HRIS. - Jenis cuti: - Cuti Tahunan:", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "12 hari kerja/tahun - Cuti Sakit - Cuti Khusus (menikah, duka cita, dll) - Pengajuan", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "cuti minimal 3 hari kerja sebelumnya melalui sistem HR. 7. Tunjangan & Benefit - BPJS", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Kesehatan & Ketenagakerjaan - Asuransi tambahan (setelah 6 bulan kerja) - Tunjangan makan dan transport", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "- Program pelatihan dan pengembangan karyawan - WFH/hybrid sesuai kebijakan tim/divisi 8. Teknologi & Alat", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Kerja - Email perusahaan: [namaanda]@contohperusahaan.co.id - Akses sistem internal: VPN, GitHub/Bitbucket, Google Workspace - Helpdesk", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "IT: support@contohperusahaan.co.id 9. Proses Evaluasi & Kenaikan Jabatan - Evaluasi kinerja dilakukan setiap 6 bulan.", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "- Kriteria evaluasi meliputi kinerja individu, kontribusi tim, dan inisiatif personal. - Promosi dan kenaikan", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "gaji berdasarkan hasil evaluasi, kebutuhan tim, dan ketersediaan posisi. 10. Pertanyaan Umum - Jika Anda", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "memiliki pertanyaan, silakan hubungi HR di hrd@contohperusahaan.co.id - Untuk kendala teknis, kirim email ke it.support@contohperusahaan.co.id", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "11. Pernyataan Karyawan Baru", "halaman": 2}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Saya yang bertanda tangan di bawah ini menyatakan telah menerima dan memahami isi dari New", "halaman": 3}
+{"sumber_file": "New_Employee_Manual.pdf", "konten": "Employee Manual ini: Nama: __________________________ Tanggal Bergabung: ______________ Tanda Tangan: ___________________ Tanggal Tanda Tangan: ___________", "halaman": 3}
 {"sumber_file": "Project_Spesification_Project_Alpha.pdf", "konten": "Spesifikasi Proyek: Proyek Alpha Dokumen ini memberikan gambaran menyeluruh tentang Proyek Alpha, termasuk ruang lingkup,", "halaman": 1}
 {"sumber_file": "Project_Spesification_Project_Alpha.pdf", "konten": "tujuan, jadwal, dan tonggak utama proyek. 1. Tujuan dan Visi: Proyek Alpha bertujuan untuk membangun", "halaman": 1}
 {"sumber_file": "Project_Spesification_Project_Alpha.pdf", "konten": "platform digital yang dapat membantu perusahaan dalam mengelola data operasional secara efisien. Visi utama proyek", "halaman": 1}

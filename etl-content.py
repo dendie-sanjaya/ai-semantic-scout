@@ -13,6 +13,7 @@ LOGS_DIR = "logs"
 FAISS_INDEX_FILE = "document_index.bin"
 CHUNKS_FILE = "chunks.txt"
 EMBEDDER_MODEL_NAME = 'sentence-transformers/all-MiniLM-L6-v2' 
+CHUNK_SIZE = 15 # Ukuran chunk dalam jumlah kata
 
 # --- Definisi Fungsi Ekstraksi PDF ---
 def extract_text_from_pdf(pdf_path):
@@ -50,7 +51,7 @@ def preprocess_text(text):
     return text
 
 # --- Definisi Fungsi Chunking Teks ---
-def chunk_text(text, source_file, page_number, chunk_size=15):
+def chunk_text(text, source_file, page_number, chunk_size):
     """
     Membagi teks menjadi chunks berdasarkan jumlah kata, dan menambahkan nomor halaman.
     """
@@ -100,13 +101,18 @@ def run_etl_pipeline():
             print(f"Memproses file: {pdf_path}")
             
             file_name = os.path.basename(pdf_path)
+            
             # Dapatkan teks per halaman sebagai daftar
             pages_text = extract_text_from_pdf(pdf_path)
             if not pages_text:
                 continue
 
+            # Buat list kosong untuk menampung semua chunk dari satu file PDF
+            all_chunks_for_log = []
+
             for page_num, page_content in enumerate(pages_text, 1):
-                chunks_with_meta = chunk_text(page_content, file_name, page_num, chunk_size=15)
+                chunks_with_meta = chunk_text(page_content, file_name, page_num, chunk_size=CHUNK_SIZE)
+                
                 if not chunks_with_meta:
                     continue
 
@@ -117,12 +123,17 @@ def run_etl_pipeline():
                 
                 for chunk in chunks_with_meta:
                     chunks_file.write(json.dumps(chunk) + "\n")
-
+                
+                # Kumpulkan semua konten chunk untuk log
+                all_chunks_for_log.extend(chunk_contents)
+            
+            # Tulis semua chunk ke satu file log, satu kali per file PDF
+            if all_chunks_for_log:
                 log_filename = os.path.splitext(file_name)[0] + ".txt"
                 log_path = os.path.join(LOGS_DIR, log_filename)
                 with open(log_path, "w", encoding="utf-8") as log_file:
-                    log_file.write("\n".join(chunk_contents))
-                print(f"Chunks berhasil disimpan sebagai log di {log_path}")
+                    log_file.write("\n".join(all_chunks_for_log))
+                print(f"Semua chunks untuk '{file_name}' berhasil disimpan sebagai log di {log_path}")
             
     faiss.write_index(faiss_index, FAISS_INDEX_FILE)
     print("Proses ETL selesai. Indeks FAISS dan chunks berhasil diperbarui.")

@@ -9,6 +9,3 @@ faiss-cpu
 PyMuPDF
 etuptools 
 wheel
-ntlk
-python -c "import nltk; nltk.download('punkt')"
-python -c "import nltk; nltk.download('punkt_tab')"
