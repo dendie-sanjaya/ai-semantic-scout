@@ -1,7 +1,6 @@
 # AI Semantic Scout
 
-AI Semantic Scout is an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. 
-This modular architecture is designed for efficient data processing and accurate search results.
+AI Semantic Scout is an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. It provides the **file name** and **page number** of the search results.
 
 ## Table of Contents
 
@@ -103,7 +102,11 @@ This is the interface for external applications to interact with the search syst
 
 ### Running the API Server
 
-- The API server runs and waits for external search requests.
+- The API server runs and waits for external search requests
+
+``` pip3 install -m requirements.txt ```
+
+``` python3 app.py  ```
 
 ![ss](./ss/4.jpg)
 
@@ -117,4 +120,5 @@ This is the interface for external applications to interact with the search syst
 ![ss](./ss/5.jpg)
 
 Results are returned in a structured JSON format like below:
+
 
