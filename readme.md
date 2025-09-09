@@ -9,10 +9,13 @@ This modular architecture is designed for efficient data processing and accurate
    - ETL Pipeline (Extract, Transform, Load)
    - Search API
 2. Simple Workflow
-3. Visualizing the Workflow
-4. Search Results
+3. Project Structure
+4. Visualizing the Workflow
+5. Search Results
 
-## System Architecture
+## 1. System Architecture
+
+![ss](./design/architecture.jpg)
 
 The system is divided into two main parts:
 
@@ -57,7 +60,7 @@ This is the interface for external applications to interact with the search syst
 
 - Returns the file name and location of the most relevant documents.
 
-## Simple Workflow
+## 2. Simple Workflow
 
 1. Place your PDF documents into the `documents/` folder.
 2. Run the ETL pipeline to convert the text into semantic vectors.
@@ -67,12 +70,28 @@ This is the interface for external applications to interact with the search syst
 6. The system finds the most similar document vectors.
 7. The system returns the file name and location of the most relevant files.
 
-## Visualizing the Workflow
+## 3. Project Structure
+
+![ss](./ss/6.jpg)
+
+- **`documents/`**: This folder holds all the original PDF files.
+- **`logs/`**: This folder stores text files that might contain logs or extracted text from the PDF documents.
+- **`app.py`**: This is the main file that runs the application.
+- **`find.py`**: This file likely contains the code to search for documents.
+- **`etl-content.py`**: This file probably processes the documents (e.g., extracts text from PDFs) and prepares them for searching.
+- **`document_index.bin`**: This file is a binary index used to make searches very fast.
+- **`chunks.txt`**: This file likely holds small parts or "chunks" of text from the documents.
+- **`requirements.txt`**: This file lists all the libraries needed to run the project.
+- **`readme.md`**: This file is a document that explains how to use the project.
+
+## 4. Visualizing the Workflow
 
 ### Downloading Models and Indexing Data
 
 - Downloads the AI model from Hugging Face.
 - Indexes documents into the FAISS vector database.
+
+  ![ss](./ss/2.jpg)
 
 ### Running the ETL Pipeline
 
@@ -80,22 +99,22 @@ This is the interface for external applications to interact with the search syst
 - Logs are generated.
 - Chunks are indexed and stored.
 
+![ss](./ss/3.jpg)
+
 ### Running the API Server
 
 - The API server runs and waits for external search requests.
+
+![ss](./ss/4.jpg)
 
 ### Performing a Semantic Search
 
 - Use tools like Postman to send a search query.
 - The system processes and returns matching results.
 
-## Search Results
+## 5. Search Results
+
+![ss](./ss/5.jpg)
 
 Results are returned in a structured JSON format like below:
 
-```json
-{
-  "konten": "Summary of the 2023 financial report...",
-  "halaman": 3,
-  "sumber_file": "financial_report_2023.pdf"
-}
