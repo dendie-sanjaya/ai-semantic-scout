@@ -1,5 +1,11 @@
 # AI Semantic Scout
 
+In any company, documents are a treasure of knowledge, but finding what you need can be a huge headache. You often remember just a few keywords, making a simple search feel like looking for a needle in a haystack.
+
+This is where AI Semantic Scout comes in.
+
+It's an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. It quickly gives you the file name and page number of the information you need, turning a frustrating search into a simple, accurate task.
+
 AI Semantic Scout is an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. It provides the **file name** and **page number** of the search results.
 
 ## Table of Contents
@@ -120,5 +126,6 @@ This is the interface for external applications to interact with the search syst
 ![ss](./ss/5.jpg)
 
 Results are returned in a structured JSON format like below:
+
 
 
