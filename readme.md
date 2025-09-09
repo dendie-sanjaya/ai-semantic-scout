@@ -1,67 +1,101 @@
-AI Semantic Scout
+# AI Semantic Scout
 
-AI Semantic Scout is an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. This modular architecture is designed for efficient data processing and accurate search.
-System Architecture
+AI Semantic Scout is an intelligent file search program that uses artificial intelligence to find documents based on their semantic meaning, not just keywords. 
+This modular architecture is designed for efficient data processing and accurate search results.
 
-The system is divided into two main parts: ETL (Extract, Transform, Load) and the Search API.
-1. ETL Pipeline (Extract, Transform, Load)
+## Table of Contents
 
-This part is responsible for transforming raw documents into searchable data. The process is done in three steps:
+1. System Architecture
+   - ETL Pipeline (Extract, Transform, Load)
+   - Search API
+2. Simple Workflow
+3. Visualizing the Workflow
+4. Search Results
 
-    Extract:
-    The extract_content_document.py module extracts text from various PDF files stored in the Storage Document folder. Text from each page is extracted and prepared for the next step.
+## System Architecture
 
-    Transform:
-    The extracted text is then processed by the AI Embedding Vector Model (using sentence-transformers/all-MiniLM-L6-v2). This model converts the text into numerical vectors (embeddings) that represent its semantic meaning. These vectors are then saved in chunks.txt and document_index.bin for fast searching. Logs of each extraction process are also saved in the Log ETL folder for reference.
+The system is divided into two main parts:
 
-    Load:
-    The created vectors are loaded into a Vector Database (document_index.bin) built with FAISS, a library for efficient similarity search. This allows the system to quickly find the vectors most similar to a user's query.
-
+1. ETL (Extract, Transform, Load)
 2. Search API
 
-This part is the interface that allows external applications to interact with the search system.
+### ETL Pipeline (Extract, Transform, Load)
 
-    API Interface (app.py):
-    The system receives search queries from external applications through a REST JSON API.
+This part is responsible for transforming raw documents into searchable data. The process includes:
 
-    Search Module (find.py):
-    The user's query is processed by find.py. This query is transformed into a vector using the same embedding model. This query vector is then searched in the Vector Database (FAISS) to find the most similar vectors.
+#### Extract
 
-    Output:
-    The search results display the most relevant file location and name, allowing users to instantly find the information they need.
+- `extract_content_document.py` extracts text from various PDF files in the `Storage Document` folder.
+- Text is extracted page-by-page and prepared for transformation.
 
-Simple Workflow
+#### Transform
 
-    You place PDF documents into the documents folder.
+- The extracted text is processed using the AI Embedding Vector Model: `sentence-transformers/all-MiniLM-L6-v2`.
+- Text is converted into embeddings (numerical vectors) representing semantic meaning.
+- Vectors are stored in `chunks.txt` and `document_index.bin` for fast searching.
+- Logs are saved in the `Log ETL` folder.
 
-    The ETL pipeline runs, converting the text in each document into vectors.
+#### Load
 
-    These vectors are saved and indexed by FAISS.
+- Vectors are loaded into a Vector Database built with FAISS (Facebook AI Similarity Search).
+- This enables high-speed similarity search for user queries.
 
-    An external application sends a query (e.g., "financial report for 2023").
+### Search API
 
-    The API converts the query into a vector.
+This is the interface for external applications to interact with the search system.
 
-    The system searches for the query vector in the database, finding the most similar document vectors.
+#### API Interface (app.py)
 
-    The system returns the name and location of the most relevant files.
+- Accepts REST JSON requests from client applications.
 
-This architecture ensures AI Semantic Scout can handle large document collections with very fast and accurate search performance.
-Visualizing the Workflow
+#### Search Module (find.py)
 
-Here is a visual overview of the AI Semantic Scout workflow from start to finish.
-1. Downloading Models and Indexing Data
+- Converts the user’s query into a vector using the same embedding model.
+- Searches the FAISS Vector Database for similar vectors.
 
-The process begins by downloading the AI model from Hugging Face and indexing your documents.
-2. Running the ETL Pipeline
+#### Output
 
-Once the model is ready, the program processes each PDF file, converts it into chunks, and saves it as a log while adding it to the index.
-3. Running the API Server
+- Returns the file name and location of the most relevant documents.
 
-The API server will start running and wait for search requests from external applications.
-4. Performing a Semantic Search
+## Simple Workflow
 
-You can use an application like Postman to send a search request. The query will be processed, and the server will return the most relevant files.
-5. Search Results
+1. Place your PDF documents into the `documents/` folder.
+2. Run the ETL pipeline to convert the text into semantic vectors.
+3. Vectors are saved and indexed by FAISS.
+4. An external app sends a query (e.g., "financial report for 2023").
+5. The API converts the query into a vector.
+6. The system finds the most similar document vectors.
+7. The system returns the file name and location of the most relevant files.
 
-The search results are displayed in an easy-to-read JSON format, containing the relevant text snippet (konten), page (halaman), and source file name (sumber_file) for your query.
+## Visualizing the Workflow
+
+### Downloading Models and Indexing Data
+
+- Downloads the AI model from Hugging Face.
+- Indexes documents into the FAISS vector database.
+
+### Running the ETL Pipeline
+
+- Each PDF is split into chunks.
+- Logs are generated.
+- Chunks are indexed and stored.
+
+### Running the API Server
+
+- The API server runs and waits for external search requests.
+
+### Performing a Semantic Search
+
+- Use tools like Postman to send a search query.
+- The system processes and returns matching results.
+
+## Search Results
+
+Results are returned in a structured JSON format like below:
+
+```json
+{
+  "konten": "Summary of the 2023 financial report...",
+  "halaman": 3,
+  "sumber_file": "financial_report_2023.pdf"
+}
